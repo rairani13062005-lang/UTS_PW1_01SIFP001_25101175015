@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Café Senja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Café<span>Senja</span></div>
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Simulasi Transaksi</h2>
+            <div class="card">
+                <form id="orderForm">
+                    <label for="kopiSelect">Pilih Kopi:</label>
+                    <select id="kopiSelect">
+                        <option value="18000">Espresso - Rp 18.000</option>
+                        <option value="22000">Americano - Rp 22.000</option>
+                        <option value="25000">Café Latte - Rp 25.000</option>
+                        <option value="25000">Cappuccino - Rp 25.000</option>
+                        <option value="27000">Matcha Latte - Rp 27.000</option>
+                        <option value="23000">Caramel Macchiato - Rp 23.000</option>
+                    </select>
+
+                    <label for="jumlah">Jumlah:</label>
+                    <input type="number" id="jumlah" min="1" value="1">
+
+                    <button type="button" id="btnHitung">Hitung Total</button>
+                </form>
+                <div id="hasilTransaksi" class="result-box" style="display: none;">
+                    <h3>Total Pembayaran: <span id="totalHarga">Rp 0</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("btnHitung").addEventListener("click", function () {
+            const hargaKopi = parseInt(document.getElementById("kopiSelect").value);
+            const jumlah = parseInt(document.getElementById("jumlah").value);
+            
+            if (isNaN(jumlah) || jumlah < 1) {
+                alert("Silakan masukkan jumlah minimal 1 gelas.");
+                return;
+            }
+
+            const total = hargaKopi * jumlah;
+            document.getElementById("totalHarga").innerText = "Rp " + total.toLocaleString("id-ID");
+            document.getElementById("hasilTransaksi").style.display = "block";
+        });
+    </script>
+</body>
+</html>

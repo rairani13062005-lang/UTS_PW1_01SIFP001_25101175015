@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Kenangan Senja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Café<span>Senja</span></div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="beranda">Beranda</a></li>
+                <li><a href="#" class="nav-link" data-target="profile">Profile</a></li>
+                <li><a href="#" class="nav-link" data-target="transaksi">Transaksi</a></li>
+                <li><a href="#" class="nav-link" data-target="login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="beranda" class="page active-page">
+            <center><h2>PEMROGRAMAN WEB 1</h2></center>
+            <center><p>Mata kuliah Pemrograman Web 1 ini membahas konsep dasar dan perancangan aplikasi berbasis website. Pembelajarannya berfokus pada pembuatan struktur halaman menggunakan teknologi HTML, CSS, dan JavaScript.</p></center>
+        </section>
+        
+        <section id="profile" class="page">
+            <h2>Profil Kafe Kami</h2>
+            <div class="card">
+                <p><strong>Café Senja</strong> didirikan pada tahun 2026 dengan misi menyajikan biji kopi lokal berkualitas tinggi langsung ke cangkir Anda. Kami percaya setiap seduhan punya cerita.</p>
+                <p>Karena motto kami adalah "Menyajikan kopi terbaik dengan penuh cinta.Karena cinta membuat hidup lebih bermakna"</p>
+                <center><p><strong>Setiap seruputan kopi adalah makna yang berarti</strong></p></center>
+                <br>
+                <p>📍 Alamat: Jl. PAMULANG RAYA No. 12, Tangerang</p>
+            </div>
+        </section>
+
+        <section id="transaksi" class="page">
+            <center><h3>Daftar Menu Kopi</h3></center>
+            <center><p>Pilih kopi favoritmu hari ini:</p></center> 
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Espresso</h3>
+                    <p class="price">Rp 18.000</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Americano</h3>
+                    <p class="price">Rp 22.000</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Café Latte</h3>
+                    <p class="price">Rp 25.000</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Cappuccino</h3>
+                    <p class="price">Rp 25.000</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Matcha Latte</h3>
+                    <p class="price">Rp 27.000</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Caramel Macchiato</h3>
+                    <p class="price">Rp 23.000</p>
+                </div>
+            </div>
+
+            <br>
+
+            <h2>Simulasi Transaksi</h2>
+            <div class="card">
+                <form id="orderForm">
+                    <label for="kopiSelect">Pilih Kopi:</label>
+                    <select id="kopiSelect">
+                        <option value="18000">Espresso - Rp 18.000</option>
+                        <option value="22000">Americano - Rp 22.000</option>
+                        <option value="25000">Café Latte - Rp 25.000</option>
+                        <option value="25000">Cappuccino - Rp 25.000</option>
+                        <option value="27000">Matcha Latte - Rp 27.000</option>
+                        <option value="23000">Caramel Macchiato - Rp 23.000</option>
+                    </select>
+
+                    <label for="jumlah">Jumlah:</label>
+                    <input type="number" id="jumlah" min="1" value="1">
+
+                    <button type="button" id="btnHitung">Hitung Total</button>
+                </form>
+                <div id="hasilTransaksi" class="result-box" style="display: none;">
+                    <h3>Total Pembayaran: <span id="totalHarga">Rp 0</span></h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="login" class="page">
+            <h2>Login Pelanggan</h2>
+            <div class="card">
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Masukkan nama pengguna" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Masukkan kata sandi">
+
+                    <button type="submit">Masuk</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <center><p>Cici Nurairani.S_251011750154.</p></center>
+</body>
+</html>
